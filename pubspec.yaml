@@ -7,14 +7,17 @@ environment:
   sdk: ">=2.15.1 <3.0.0"
   flutter: ">=2.5.0"
 
+
 dependencies:
   flutter:
     sdk: flutter
+  ffi: ^1.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
+  ffigen: ^4.1.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -63,3 +66,11 @@ flutter:
   #
   # For details regarding fonts in packages, see
   # https://flutter.dev/custom-fonts/#from-packages
+
+ffigen:
+  output: lib/bindings.dart
+  headers:
+    entry-points:
+      - rust/target/bindings.h
+  name: GreeterBindings
+  description: Dart bindings to call mylib functions
