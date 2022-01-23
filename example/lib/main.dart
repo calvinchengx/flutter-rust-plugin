@@ -3,6 +3,8 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:native_rust_code/native_rust_code.dart';
+import 'package:native_rust_code/gretter.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -48,13 +50,16 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+
+    String result = Greeter.greet("Aung Thu");
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: Text('$result Running on: $_platformVersion\n'),
         ),
       ),
     );
