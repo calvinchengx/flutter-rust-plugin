@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
 
-    String result = Greeter.greet("Aung Thu");
+    String result = Greeter.greet("to Flutter From Rust Code");
 
     return MaterialApp(
       home: Scaffold(
