@@ -11,4 +11,9 @@ public class SwiftNativeRustCodePlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     result("iOS " + UIDevice.current.systemVersion)
   }
+
+  public func dummyMethodToEnforceBundling() {
+        // dummy calls to prevent tree shaking
+        rust_greeting("");
+      }
 }
