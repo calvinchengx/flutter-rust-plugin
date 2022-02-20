@@ -1,5 +1,3 @@
-// NOTE: Append the lines below to ios/Classes/<your>Plugin.h
-
 #include <stdarg.h>
 #include <stdbool.h>
 #include <stdint.h>
@@ -28,4 +26,3 @@ char *get_child_mk1(const char *c_master_key_one_json, int32_t c_x_pos, int32_t 
 char *get_child_mk2(const char *c_master_key_two_json, int32_t c_x_pos, int32_t c_y_pos);
 
 char *construct_single_private_key(const char *c_mk1_x1, const char *c_mk2_x2);
-
